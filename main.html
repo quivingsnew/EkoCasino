@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit ETH</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+        }
+
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 320px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 16px;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            filter: brightness(1.2);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-btn {
+            background: linear-gradient(45deg, #007bff, #00c6ff);
+        }
+
+        .close-btn {
+            background: linear-gradient(45deg, #ff0000, #ff7300);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Deposit ETH</h1>
+        <button class="btn" onclick="alert('Processing deposit...')">Deposit</button>
+        <button class="btn copy-btn" onclick="copyAddress()">Copy ETH Address</button>
+        <button class="btn close-btn" onclick="window.close()">Close</button>
+    </div>
+
+    <script>
+        function copyAddress() {
+            const ethAddress = "0x88AB1dBD41AF7c8df31417E264E28DC8BA83c4fb";
+            navigator.clipboard.writeText(ethAddress);
+            alert("ETH Address copied: " + ethAddress);
+        }
+    </script>
+
+</body>
+</html>
